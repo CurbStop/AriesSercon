@@ -1,0 +1,1280 @@
+/*...........................
+CONSTANTS
+............................*/
+
+/*...........................
+HELPERS
+............................*/
+
+
+/*............................
+COLORS
+..............................
+*/
+
+$moondust: #E1E2D8;
+$mars: #F5C79A;
+$burnbrown: #493843;
+$euculyptus: #61988E;
+$mcmgreen: #A0B2A6;
+$chalkpink: #CBBFBB;
+$pink: #EABDA8;
+
+$charcoal: #484848;
+$white: #fff;
+
+/*...........................
+COLOR BACKGROUNDS
+.............................*/
+
+/*............................
+TWITTER
+..............................*/
+
+/*.............................
+MAPS
+...............................*/
+
+.gmaps	{
+	position: relative;
+	height: 300px;
+
+}
+
+.gmaps iframe	{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+
+
+
+/*.............................
+NAVIGATION
+..............................*/
+
+nav 	{
+	height: 100px;
+}
+
+nav li	{
+	float: right;
+	margin: 0px;
+	padding: 35px 10px 5px 5px;
+	list-style-type: none;
+}
+
+.secondaryNav	{
+	height: 20px;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	position: absolute;
+	bottom: 15px;
+
+}
+
+.interNav	{
+	list-style-type: none;
+	padding: 5px;
+	margin-left: 0px;
+	margin-right: 0px;
+	border-radius: 3px;
+	background-color: $charcoal;
+	float: none;
+	display: inline-block;
+}
+
+.footLinks	{
+	padding-top: 10px;
+	background-color: rgba(255, 255, 255, 0.63)
+}
+
+
+
+/*.............................
+LAYOUT
+...............................*/
+
+body, html	{
+	margin: 0;
+}
+
+.sr .process {
+	visibility: hidden;
+}
+
+.wrapper	{
+	min-height: 100vh;
+	max-width: 100vw;
+
+}
+
+.col 	{
+	float: left;
+}
+
+.clientLogoContainer	{
+	max-width: 100%;
+	margin: 0 auto;
+	position: absolute;
+	top: 50%;					/* move the div's top border to the half height of the outer div*/
+ 	transform: translateY(-50%); /* move the inner div up by half its height */
+ 	-webkit-transform: translateY(-50%);
+ 	-o-transform: translateY(-50%);
+}
+
+.clearfix	{ /* used for the navigation bar to prevent li items from crashing into same line as the logo */
+	content: " ";
+	display: block;
+	clear: both;
+
+}
+
+
+.serviceSection {
+	background: rgba(255,255,255, 0.9);
+	margin: 10px 0px 10px 0px;
+	border-radius: 5px;
+	position: relative;
+}
+
+.labelParent	{
+	border-bottom: solid 1px $moondust;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+.labelContainer	{
+	border: 2px $white dashed;
+	padding: 2px;
+	display: inline-block;
+	margin-left: 30px;
+	background-color: $white;
+	float: left;
+}
+
+.descriptions	{
+	float: left;
+}
+
+.spaceMaker	{
+	height: 30px;
+}
+
+.equalizeHeight	{
+	vertical-align: top;
+}
+
+/*...............................
+FORM
+.................................*/
+
+
+
+
+/*................................
+FONTS
+.................................*/
+h2, p, .tandc, label, input, button, select {
+	color: $charcoal;
+}
+
+
+h2, h3, p, .tandc, ul, label {
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+	padding-left: 30px;
+	padding-right: 30px;
+
+}
+
+h1	{
+	font-size: 2.441rem;
+	font-family: 'Exo 2', sans-serif;
+}
+
+h2	{
+	font-size: 1.953rem;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+
+}
+
+h3	{
+	font-size: 1.563rem;
+	padding-bottom: 10px;
+	padding-top: 0px;
+	color: $euculyptus;
+
+}
+
+p, label	{
+	font-size: 1.25rem;
+	margin-bottom: 20px;
+	
+}
+
+a {
+	text-decoration: none;
+}
+
+p.columnP	{
+	padding: 10px;
+	height: 165px;
+	border-bottom: 1px solid $moondust;
+}
+
+a p 	{
+	margin-bottom: 2px;
+	transition: .5s;
+	border-bottom: 1px dashed $moondust;
+	
+}
+
+a p:hover	{
+	color: $pink;
+	font-style: italic;
+	transition: .2s;
+}
+
+.tandc	{
+	font-size: 0.8rem;
+	color: $moondust
+}
+
+.navLink,	{
+	color: $moondust;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
+	text-decoration: none;
+}
+
+.navLink {									/* style the links on the primary navigation */
+	transition: .9s;
+	padding-bottom: 2px;
+
+}
+
+.secLink	{
+	color: $white;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+
+}
+
+
+.center	{
+	text-align: center;
+}
+
+.header	{
+	color: $moondust;
+	position: absolute;
+    top: 40%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+p.promo	{
+    line-height: 1.8rem;
+    padding: 0 10% 0% 10%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0%, -50%);
+    -o-transform: translate(0%, -50%);
+    transform: translate(0%, -50%);
+    margin-top: 0%;
+   
+}
+
+li.bullet	{
+	display: list-item;
+	list-style-type: disc;
+	margin-left: 15px;
+	margin-bottom: 1rem;
+	
+}
+
+.label	{
+	font-size: .9rem;
+	margin-bottom: 0px;
+	padding-right: 2px;
+
+}
+
+
+.putInLine	{
+	display: inline;
+	padding-left: 5px;
+}
+
+.opaqueBg	{
+	background-color: rgba(255, 255, 255, 0.63);
+	padding-bottom: 5px;
+}
+
+.contactBg	{
+	background: url(../assets/ricepaper.png);
+	background-repeat: repeat;
+}
+
+
+
+
+
+/*...............................
+EFFECTS
+................................*/
+
+.navLink:hover	{
+	text-shadow: 2px 2px 8px #FFF;
+	transition: 0.1s;
+	border-bottom: 4px solid $moondust;
+	padding-bottom: 2px;
+}
+
+
+
+/*..............................
+IMAGES
+...............................*/
+
+.landing, .checks, .process, .clients, .footer, .serviceLanding, .whatWeDo, 
+.howWeWork, .startWorking, .taxEnviro, .calendar, .documentation, 
+.corporate, .humanr, .labourLaw, .qanda, .contactus{
+	min-height: 100vh;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */  
+    /* used box-sizing to prevent padding added to text from increasing the overall size of the div*/
+    overflow: hidden; /* prevent the contents inside this div from overflowing into adjacent divs*/
+
+   
+}
+
+.landing	{
+	background-image: url("../assets/starrynight1.jpg");
+	background-size: cover;
+	position: relative;
+}
+
+.checks	{
+	background-image: url("../assets/squares.png");
+	position: relative;
+
+}
+
+.process	{
+	background: -moz-linear-gradient(352deg, rgba(230,224,199,1) 0%, rgba(197,215,231,1) 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(230,224,199,1)), color-stop(100%, rgba(197,215,231,1))); /* safari4+,chrome */
+	background: -webkit-linear-gradient(352deg, rgba(230,224,199,1) 0%, rgba(197,215,231,1) 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(352deg, rgba(230,224,199,1) 0%, rgba(197,215,231,1) 100%); /* opera 11.10+ */ 
+	position: relative;
+}
+
+.clients	{
+	color: $white;
+	position: relative;
+}
+
+.footer	{
+	position: relative; /* for use with .disclaimer class*/
+	background-image: url("../assets/mountain.svg"), url("../assets/ricepaper.png");
+	background-repeat: no-repeat, repeat;
+	background-position: bottom, left;
+	background-size: cover, auto;
+}
+
+.serviceLanding	{
+	background-image: url("../assets/starrynight4.jpg");
+	background-size: cover;
+	position: relative;
+}
+
+.whatWeDo	{
+	background-color: $white;
+	position: relative;
+	background-image: url("../assets/earth.svg");
+	background-position: 120%;
+	background-repeat: no-repeat;
+}
+
+.startWorking	{
+	background-image: url("../assets/pinkrice.png");
+	background-repeat: repeat-x repeat-y;
+	position: relative;
+
+}
+
+.taxEnviro	{
+	position: relative;
+	background-image: url("../assets/mars2.jpg"), url("../assets/mars1.jpg");
+	background-repeat: no-repeat, repeat;
+	background-position: 0px bottom;
+	background-color: white;
+	
+}
+
+.calendar	{
+	position: relative;
+	background-image: url("../assets/grey.png");
+	background-repeat: repeat;
+}
+
+.documentation	{
+	position: relative;
+	background-image: url("../assets/ricepaper.png");
+	background-repeat: repeat;
+}
+
+.corporate	{
+	position: relative;
+	background-image: url("../assets/plutofinal.jpg");
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+}
+
+
+.humanr	{
+	position: relative;
+	background-image: url("../assets/surfacefinal.jpg");
+	background-position: bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.labourLaw	{
+	position: relative;
+	background-image: url("../assets/texgreen.png");
+	background-repeat: repeat;	
+}
+
+.qanda	{
+	position: relative;
+	background-image: url("../assets/texgreen.png");
+	background-repeat: repeat;
+	padding-bottom: 20px;	
+}
+
+.contactus	{
+	position: relative;
+	background-image: url("../assets/dgrey.png");
+	background-repeat: repeat;
+}
+
+.disclaimer	{
+	position: absolute; /* move this div to bottom of the div it is contained in */
+	clear: both; /* stops it from collapsing into the space after the floated div before it*/
+}
+
+.logo, .logodesktop	{
+	width: 250px;
+	padding: 5px;
+}
+
+
+.fullSizeLogo	{
+	max-width: 100%;
+
+}
+
+.download::before	{
+	content: url("../assets/dl.jpg");
+	display: inline;
+	margin-left: 30px;
+}
+
+.icons	{
+	width: 15px;
+	transition: all 0.3s ease-in-out 0.3s;
+
+}
+
+img.icons:hover	{
+    transform: rotate(45deg);
+    transition: all 0.1s ease-in-out .1s;
+}
+
+
+/*................................
+MEDIA QUERIES - Phones
+..................................*/
+	
+@media only screen and (min-width: 320px) and (max-width: 480px)	{
+
+/*.................................
+NAVIGATION
+..................................*/
+
+.desktop 	{
+	display: none;
+}
+
+.logodesktop	{
+	display: none;
+}
+
+.mobile		{
+	list-style: none;
+	margin: 0 ;
+	padding: 0;
+	text-align: center;
+
+}
+
+.mobile li 	{
+	display: inline;
+	padding-top: 10px;
+	float: none;
+
+}
+
+
+.mobile a 	{
+	display: inline-block;
+	padding: 0px;
+}
+
+.secondaryNav  	{
+	left: 10%;
+	-moz-transform: translateX(-10%);
+	-webkit-transform: translateX(-10%);
+ 	-o-transform: translateX(-10%);
+	transform: translateX(-10%);
+}
+
+/*.................................
+FONTS
+...................................*/
+
+html	{
+	font-size: 70%;
+
+}
+
+.label 	{
+	padding-left: 10px;
+}
+
+p.promo	{
+	line-height: 1.4em;
+}
+
+p.columnP	{
+	padding: 4px;
+	height: 50px;
+	border-bottom: 1px solid $moondust;
+	margin-bottom: 0px;
+}
+
+}
+
+/*..............................
+LAYOUT
+................................*/
+
+.clientLogo	{
+	float: left;
+	height: 60px;
+	width: 60px;
+	margin: 10px 10px 10px 30px;
+}
+
+.footLinks	{
+	width: 180px;
+}
+
+.serviceSection {
+	margin-bottom: 5px;
+
+}
+
+.dividerA	{
+	padding-top: 10px;
+	height: 40%;
+	background-image: url("../assets/ricepaper.png");
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+
+.labelParent	{
+	border-bottom: solid 1px $moondust;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+.labelContainer	{
+	border: 2px $white dashed;
+	padding: 2px;
+	display: inline-block;
+	margin-left: 30px;
+	background-color: $white;
+	width: 100px;
+	float: left;
+}
+
+.descriptions	{
+	float: left;
+	width: 150px;
+}
+
+
+/*.................................
+FORMS
+..................................*/
+
+form 	{
+	margin-bottom: 50px;
+}
+
+label 	{
+	display: inline-block;
+	width: 50px;
+}
+
+input	{
+	padding: 2px;
+}
+
+input, select, button, textarea	{
+	width: 150px;
+	line-height: 2rem;
+	margin: 5px;
+	border: none;
+
+	 -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+     -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+      box-sizing: border-box;
+}
+
+textarea	{
+	line-height: 1rem;
+	resize: none;
+	vertical-align: middle;
+}
+
+input:focus, textarea:focus	{
+	background: $pink;
+	-webkit-transition: background .4s;
+    -moz-transition: background .4s;
+    ms-transition: background .4s;
+    -o-transition: background .4s;
+    transition: background .4s;
+}
+
+.button	{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+button	{
+	line-height: 2em;
+	margin-left: 00px;
+	background: $mcmgreen;
+	width: 240px;
+	height: 30px;
+
+	-webkit-transition: .4s;
+    -moz-transition: .4s;
+    ms-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+button:hover	{
+	background: $pink;
+}
+
+
+
+/*................................
+IMAGES
+...................................*/
+
+
+.halfSizeLogo	{
+	max-width: 8%;
+
+}
+
+.sixtyPxIcon	{
+	width: 30px;
+}
+
+
+.serviceIcons	{
+	@extend .halfSizeLogo;
+
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+
+.linkOutServiceSection	{
+	@extend .sixtyPxIcon;
+
+	position: absolute;
+	top: 5px;
+	right: 2px;
+}
+
+
+.arrows	{
+	display: none;
+}
+
+
+.howWeWork	{
+	position: relative;
+	background-image: url("../assets/bedge_grunge.png");
+	background-repeat: repeat;
+}
+
+.disclaimer	{
+	bottom: 2px;
+	left: 180px;
+}
+
+/* Phones - Landscape */
+
+/*................................
+MEDIA QUERIES - Tablets
+..................................*/
+
+@media only screen and (min-width: 481px) and (max-width: 768px)	{
+
+/*.................................
+NAVIGATION
+..................................*/
+
+.desktop,	{
+	display: initial;
+}
+
+.mobile {
+	display: none;
+}
+
+.secondaryNav  	{
+	left: 50%;
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+ 	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+/*............................
+FONTS
+..............................*/
+
+html	{
+	font-size: 85%;
+}
+
+p.promo	{
+	line-height: 1.5em;
+}
+
+p.columnP	{
+	padding: 10px;
+	height: 18%;
+	border-bottom: 1px solid $moondust;
+}
+
+.hide		{
+	display: none;
+}
+
+/*.............................
+LAYOUT
+...............................*/
+
+.clientLogo {
+	float: left;
+	height: 80px;
+	width: 80px;
+	margin: 10px 30px 10px 30px;
+	background: $moondust;
+
+}
+
+
+.serviceContainer	{
+	max-width: 768px;
+	margin: 0 auto;
+
+}
+
+
+.serviceSection	{
+	max-width: 768px;
+	height: 200px;
+	padding-top: 0px;
+
+}
+
+
+.dividerA	{
+	height: 30%;
+	background-image: url("../assets/ricepaper.png");
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	padding-top: 20px;
+	box-sizing: border-box;
+}
+
+.labelParent	{
+	border-bottom: solid 1px $moondust;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+.labelContainer	{
+	border: 2px $white dashed;
+	padding: 2px;
+	display: inline-block;
+	margin-left: 30px;
+	background-color: $white;
+	width: 136px;
+	float: left;
+}
+
+.leftCol	{
+	margin-bottom: 20px;
+}
+
+.descriptions	{
+	width: 260px;
+	float: left;
+}
+
+.footLinks	{
+	width: 200px;
+	height: 200px;
+}
+
+/*................................
+FORMS
+.................................*/
+
+label 	{
+	display: inline-block;
+	width: 50px;
+}
+
+input, select, button, textarea   {
+  	width : 200px;
+  	margin: 5px;
+  	border: none;
+
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+
+}
+
+input, select	{
+	line-height: 2rem;
+	padding: 5px;
+	background: $white;
+}
+
+input:focus, textarea:focus	{
+	background: $pink;
+	-webkit-transition: background .4s;
+    -moz-transition: background .4s;
+    ms-transition: background .4s;
+    -o-transition: background .4s;
+    transition: background .4s;
+}
+
+textarea	{
+	line-height: 1rem;
+	width: 250px;
+	height: 200px;
+	padding: 5px;
+	resize: none;
+	vertical-align: middle;
+
+	-webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+}
+
+.button	{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+button	{
+	line-height: 2em;
+	margin-left: 89px;
+	background: $mcmgreen;
+
+	-webkit-transition: .4s;
+    -moz-transition: .4s;
+    ms-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+button:hover	{
+	background: $pink;
+}
+
+/*................................
+IMAGES
+...................................*/
+
+
+.halfSizeLogo	{
+	max-width: 8%;
+
+}
+
+.sixtyPxIcon	{
+	width: 60px;
+}
+
+
+.serviceIcons	{
+	@extend .halfSizeLogo;
+
+	position: absolute;
+	left: 5px;
+	top: 5px;
+}
+
+.linkOutServiceSection	{
+	@extend .sixtyPxIcon;
+	position: absolute;
+	top: 125px;
+	right: 50%;
+    -webkit-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+.arrows	{
+	display: none;
+	
+
+	}
+
+.disclaimer	{
+	bottom: 2px;
+	left: 0px;
+}
+
+
+}
+
+/*................................
+MEDIA QUERIES - Desktops
+..................................*/
+
+@media only screen and (min-width: 769px) 	{
+
+/*................................
+NAVIGATION
+..................................*/
+
+.mobile	{
+	display: none;
+}
+
+.secondaryNav  	{
+	left: 50%;
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+ 	-o-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+/*............................
+FONTS
+..............................*/
+
+html	{
+	font-size: 100%;
+}
+
+
+/*...............................
+LAYOUT
+.................................*/
+
+.clientLogo {
+	float: left;
+	height: 120px;
+	width: 120px;
+	margin: 10px 30px 10px 30px;
+	background: $moondust;
+
+}
+
+.serviceContainer	{
+	max-width: 1046px;
+	margin: 0 auto;
+}
+
+.serviceSection:last-child	{
+	margin-right: 0px;
+}
+
+.serviceSection	{
+	max-width: 250px;
+	height: 480px;
+	float: left;
+	background:rgba(255,255,255, 0.9);
+	margin: 10px 15px 10px 0px;
+	border-radius: 5px;
+	position: relative;
+	text-align: left;
+
+}
+
+.dividerA	{
+	padding-top: 10px;
+	height: 40%;
+	background-image: url("../assets/ricepaper.png");
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.leftCol	{
+	float: left;
+	width: 40%;
+	margin-right: 10px;
+}
+
+.rightCol	{
+	float: right;
+
+}
+
+.labelParent	{
+	border-bottom: solid 1px $moondust;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+
+.labelContainer	{
+	border: 2px $white dashed;
+	padding: 2px;
+	display: inline-block;
+	margin-left: 30px;
+	margin-bottom: 5px;
+	background-color: $white;
+	width: 136px;
+	float: left;
+}
+
+.descriptions	{
+	width: 260px;
+	margin-left: 30px;
+	float: left;
+}
+
+.footLinks	{
+	width: 200px;
+	height: 200px;
+}
+
+/*...............................
+FORM
+.................................*/
+
+label 	{
+	display: inline-block;
+	width: 50px;
+}
+
+input, select, button, textarea   {
+  	width : 200px;
+  	margin: 5px;
+  	border: none;
+
+    -webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+
+}
+
+input, select	{
+	line-height: 2rem;
+	padding: 5px;
+	background: $white;
+}
+
+input:focus, textarea:focus	{
+	background: $pink;
+	-webkit-transition: background .4s;
+    -moz-transition: background .4s;
+    ms-transition: background .4s;
+    -o-transition: background .4s;
+    transition: background .4s;
+}
+
+textarea	{
+	line-height: 1rem;
+	width: 250px;
+	height: 200px;
+	padding: 5px;
+	resize: none;
+	vertical-align: middle;
+
+	-webkit-box-sizing: border-box; /* For legacy WebKit based browsers */
+    -moz-box-sizing: border-box; /* For legacy (Firefox <29) Gecko based browsers */
+    box-sizing: border-box;
+}
+
+.button	{
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+button	{
+	line-height: 2em;
+	margin-left: 89px;
+	background: $mcmgreen;
+
+	-webkit-transition: .4s;
+    -moz-transition: .4s;
+    ms-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+
+button:hover	{
+	background: $pink;
+}
+
+
+/*................................
+IMAGES
+..................................*/
+
+.disclaimer	{
+	left: 2px;
+}
+
+.howWeWork	{
+	position: relative;
+	background-image: url("../assets/accprocess.svg"), url("../assets/bedge_grunge.png");
+	background-position: 100% 0;
+	background-repeat: no-repeat, repeat;
+}
+
+
+.halfSizeLogo	{
+	max-width: 50%;
+
+}
+
+.fortyPxIcon	{
+	width: 45px;
+}
+
+.sixtyPxIcon	{
+	width: 60px;
+}
+
+
+
+.serviceIcons	{
+	@extend .halfSizeLogo;
+
+	position: absolute;
+	left: 62.5px;
+	top: 50px;
+}
+
+.linkOutServiceSection	{
+	@extend .sixtyPxIcon;
+	position: absolute;
+	top: 400px;
+	right: 50%;
+    -webkit-transform: translateX(50%);
+    -o-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+
+
+@mixin animarrowOpacity	{ /* define a mixin here which will be used for repeating for each vendor prefix */
+
+	0%	{
+		opacity: 0;
+	}
+
+	25%	{
+		opacity: .2;
+	}
+
+	50%	{
+		opacity: .5;
+	}
+
+	75%	{
+
+		opacity: .7;
+	}
+
+	100%	{
+		opacity: 1;
+	}
+}
+@-webkit-keyframes animarrow	{
+	
+	@include animarrowOpacity;
+
+}
+
+@-moz-keyframes animarrow	{
+	
+	@include animarrowOpacity;
+
+}
+
+
+@-o-keyframes animarrow	{
+	
+	@include animarrowOpacity;
+
+}
+
+@keyframes animarrow	{
+	
+	@include animarrowOpacity;
+
+}
+
+.arrows	{
+	display: initial; /* allow the arrows to become visible again at this viewport size*/
+	width: 20px;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+
+	-webkit-animation: animarrow 15s ease 0s 1 normal;
+	-moz-animation: animarrow 15s ease 0s 1 normal;
+	-o-animation: animarrow 15s ease 0s 1 normal;
+	animation: animarrow 15s ease 0s 1 normal;
+
+}
+
+
+}
+
+
+
+
